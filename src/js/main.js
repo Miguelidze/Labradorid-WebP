@@ -5,7 +5,7 @@ $(".burger-btn").on("click", function () {
   $(this).toggleClass("active");
   $(".mobile__header").toggleClass("active");
 });
-$(".").on("click", function () {
+$(".main-slider").on("click", function () {
   $(".burger-btn").removeClass("active");
   $(".mobile__header").removeClass("active");
 });

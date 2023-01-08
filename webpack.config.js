@@ -6,11 +6,6 @@ const target = devMode ? "web" : "browserslist";
 const devtool = devMode ? "source-map" : undefined;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// const PAGES_DIR = `${PATHS.src}/html`;
-// const PAGES = fs
-//   .readdirSync(PAGES_DIR)
-//   .filter((fileName) => fileName.endsWith(".html"));
-
 module.exports = {
   mode,
   target,
@@ -24,19 +19,17 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    filename: "[name].[contenthash].js",
+    filename: "[name].js",
     assetModuleFilename: "assets/[name][ext]",
   },
   watchOptions: {
-    ignored: /node_modules/
+    ignored: /node_modules/,
   },
   plugins: [
-    
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
     }),
-    
 
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",

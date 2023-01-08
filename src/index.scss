@@ -5,6 +5,8 @@
 @import 'scss/utils/_vars.scss';
 @import 'scss/utils/_vars';
 @import 'scss/utils/_fonts';
+@import 'scss/utils/slick';
+@import 'scss/utils/def-slider';
 
 @import 'scss/sections/_header.scss';
 @import 'scss/sections/_main.scss';
@@ -72,15 +74,12 @@ p {
 }
 .page-content-wrapper{
 		position: fixed;
-		left: 120px;
-		right: 0;
 		height: 100%;
+		left: 0;
 		overflow-x: auto;
-		background: $background-color;
 		&.lock{
 		display: block;
 		position: fixed;
-		margin-right: 15px;
 		background-color: rgba(0,0,0,.4);
 		overflow-y: hidden;
 		}
@@ -121,109 +120,4 @@ p {
 .section-wrapper {
 	display: flex;
 	width: 100%;
-	  &--contacts{
-		height: auto;
-	  }
-	//   &--follow{
-	// 	height: -webkit-fill-available;
-	//   }
-	@media screen and (max-width:$smTabletWidth){
-		height: -webkit-fill-available;
-	}
-	@media screen and (max-width:$phoneWidth){
-		background-position: right;
-			
-	}
-}
-.svg-wrap{
-	width: 24px;
-	height: 24px;
-	fill: #FFFFFF;
-	stroke: #FFFFFF;
-	&--image{
-		width: 60px;
-		height: 60px;
-		@media screen and (max-width:$tabletWidth){
-			width: 38px;
-			height: 38px;
-		}
-		@media screen and (max-width:$phoneWidth){
-			width: 24px;
-			height: 24px;
-		}
-	}
-	&--person{
-		width: 32px;
-		height: 32px;
-		@media screen and (max-width:$phoneWidth){
-			width: 24px;
-			height: 24px;
-		}
-	}
-	&--nav-next,
-	&--nav-prev{
-		position: absolute;
-		top: 40%;
-		z-index: 10;
-		width: 40px;
-		height: 40px;
-		@media screen and (max-width:$phoneWidth){
-			top: 90%;
-		}
-		&--menu{
-			width: 40px;
-			height: 40px;
-			position: relative;
-			@media screen and (max-width:$tabletWidth){
-				width: 32px;
-				height: 32px;
-			}
-			@media screen and (max-width:$phoneWidth){
-				width: 24px;
-				height: 24px;
-			}
-		}
-	}
-	&--nav-next{
-		right: 3%;
-	}
-	&--nav-prev{
-		left: 3%;
-	}
-	&--follow{
-		width: 70px;
-		height: 70px;
-		@media screen and (max-width:1280px){
-			width: 40px;
-			height: 40px;
-		}
-		@media screen and (max-width:576px){
-			width: 24px;
-			height: 24px;
-		}
-	}
-	&--heart{
-		position: relative;
-		padding: 10px;
-		width: 100px;
-		height: 100px;
-		transition: all 0.6s;
-	  animation:pulse 0.9s ease-in-out;
-		animation-iteration-count: infinite;
-		@media screen and (max-width:1280px){
-			width: 75px;
-			height: 75px;
-		}
-		
-	}
-
-	&:hover{
-		fill: url(#hover-svg-gradient) #FEE159;
-		stroke: url(#hover-svg-gradient) #FEE159;
-		
-	}
-	&:active{
-		fill: url(#active-svg-gradient) #9747FF;
-		stroke: url(#active-svg-gradient) #9747FF;
-	}
 }
