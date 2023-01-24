@@ -8,6 +8,14 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
+  });
+  $(".gallery-slider").slick({
+    dots: false,
+    arrows: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
   });
 });

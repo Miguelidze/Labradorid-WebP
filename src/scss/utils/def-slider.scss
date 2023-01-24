@@ -1,16 +1,18 @@
 // Default slider styles
 
 .def-slider {
-  min-width: 0;
+  // min-width: 0;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-wrap: wrap;
   /* Слайдер */
-  .slick-slider {
-    position: relative;
-  }
+  // .slick-slider {
+  //   position: absolute;
+  //   top: 50px;
+  //   z-index: 0;
+  // }
   /* Слайдер запущен */
   .slick-slider.slick-initialized {
   }
@@ -18,18 +20,17 @@
   .slick-slider.slick-dotted {
   }
   /* Ограничивающая оболочка */
-  .slick-list{
-    overflow: hidden;
-  }
+  // .slick-list{
+  //   overflow: auto;
+  // }
   /* Лента слайдов */
   .slick-track {
-
   }
   /* Слайд */
-  .slick-slide {
-    width: 100%;
-	aspect-ratio: 1.8 !important;
-  }
+  // .slick-slide {
+  //   width: 100%;
+  // aspect-ratio: 1.8 !important;
+  // }
   /* Слайд активный (показывается) */
   .slick-slide.slick-active {
   }
@@ -64,7 +65,7 @@
     padding: 0;
     flex-wrap: nowrap;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
   }
   .slick-dots li {
     list-style: none;
@@ -84,18 +85,103 @@
     border-color: transparent;
     width: 16px;
     height: 16px;
-    @media screen and (max-width: $phoneWidth ) {
+    @media screen and (max-width: $phoneWidth) {
       margin: 0 10px;
-  }
-  @media screen and (max-width: $smPhoneWidth ) {
-    width: 12px;
-    height: 12px;
-}
+    }
+    @media screen and (max-width: $smPhoneWidth) {
+      width: 12px;
+      height: 12px;
+    }
   }
   .slick-dots li.slick-active button {
     background: tomato;
   }
 }
+// Gallery slider
+.gallery-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 65px;
+  z-index: 0;
+  @media screen and (max-width: $smTabletWidth) {
+    padding: 0 45px;
+  }
+  // .gallery-slider__wrap
 
+  &__wrap {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-
+  // .gallery-slider__slide
+  &__slide {
+    display: block;
+    align-self: center;
+    position: relative;
+    width: 100%;
+    // aspect-ratio: 1.7;
+    min-height: 0;
+  }
+  // // .gallery-slider__image
+  &__image {
+    width: 100%;
+    // height: 100%;
+    border-radius: 8px;
+    aspect-ratio: 1.7;
+    &--vertical{
+      @media screen and (max-width: $smTabletWidth) {
+        aspect-ratio: 0.6;  
+      } 
+    }
+    @media screen and (max-width: $smTabletWidth) {
+      display: flex;
+      height: auto;
+      align-items: center;
+    }
+  }
+  &__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1.7;
+    border-radius: 8px;
+    background-position: center;
+    object-fit: contain;
+    @media screen and (max-width: $smTabletWidth) {
+      top: auto;
+      height: auto;
+      aspect-ratio: auto;
+    }
+  }
+}
+.gallery-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 0;
+  z-index: 5;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-color: $active-color;
+  border-radius: 50%;
+  @media screen and (max-width: $mediumWidth) {
+    width: 40px;
+    height: 40px;
+  }
+}
+.gallery-slider .slick-arrow.slick-prev {
+  left: 0;
+  background-image: url(img/svg/previous.svg);
+  background-size: contain;
+  background-position: -2px;
+}
+.gallery-slider .slick-arrow.slick-next {
+  right: 0;
+  background-image: url(img/svg/next.svg);
+  background-size: contain;
+  background-position: 3px;
+}

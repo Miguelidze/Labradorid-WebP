@@ -7,16 +7,18 @@ $secondaryTextFont       : Poppins, sans-serif;
 //Def font colors
 $fontColorPrimary        : #ffffff;
 $fontColorPrimaryInv     : #191817;
+$fontColorDefault        : #c4c4c4;
+$fontColorActive         : #53FF98;
 
 //Def font sizes
-$fontSizeXXL_desktop     : 64px;
-$fontSizeXXL_mobile      : 32px;
+$fontSizeXXL_desktop     : 45px;
+$fontSizeXXL_mobile      : 40px;
 
-$fontSizeXL_desktop      : 48px;
-$fontSizeXL_mobile       : 32px;
+$fontSizeXL_desktop      : 40px;
+$fontSizeXL_mobile       : 28px;
 
-$fontSizeL_desktop       : 32px;
-$fontSizeL_mobile        : 22px;
+$fontSizeL_desktop       : 36px;
+$fontSizeL_mobile        : 24px;
 
 $fontSizeM_desktop       : 20px;
 $fontSizeM_mobile        : 16px;
@@ -38,13 +40,14 @@ $mainFontSize            : 16px;
 $mainFontWeight          : 400;
 $mainLineHeight          : 1.4;
 
+$largeWidth              : 1680px;
 $desktopWidth            : 1440px;
 $smDesktopWidth          : 1280px;
 $tabletWidth             : 992px;
 $mediumWidth             : 890px;
 $smTabletWidth           : 790px;
 $phoneWidth              : 576px;
-$smPhoneWidth            : 320px;
+$smPhoneWidth            : 350px;
 
 /*
   All colors taken from:

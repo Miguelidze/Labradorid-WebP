@@ -21,7 +21,7 @@
   position: relative;
 
   display: block;
-  overflow: hidden;
+  overflow:hidden;
 
   margin: 0;
   padding: 0;
@@ -47,10 +47,8 @@
   position: relative;
   top: 0;
   left: 0;
-
+  overflow: hidden;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .slick-track:before,
 .slick-track:after {
@@ -69,9 +67,11 @@
   display: none;
   float: left;
   width: 100%;
-  aspect-ratio: 1.8;
-  min-height: 1px;
+  height: 100%;
+  /* aspect-ratio: 1.7; */
+  min-height: 0px;
 }
+
 [dir="rtl"] .slick-slide {
   float: right;
 }
