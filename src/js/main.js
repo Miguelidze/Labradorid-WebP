@@ -152,66 +152,15 @@ $(function () {
 ///MODAL
 const myModal = new HystModal({
     linkAttributeName: "data-hystmodal",
-    // настройки (не обязательно), см. API
 });
 
-// class galleryModal{
-//   constructor(props) {
-//     let defaultConfig = {
-//       linkAttributeName: 'data-gallerymodal',
-
-//     }
-//     this.config = Object.assign(defaultConfig, props);
-//     this.init();
-//   }
-//   static _shadow = false;
-//   init() {
-//     this.isOpened = false;
-//     this.openedWindow = false;
-//     this._modalBlock = false;
-//     this.starter = false;
-//     this._nextWindows = false;
-//     this._scrollPosition = 0;
-// }
-// $(document).on('click', '.modal-trigger', function(event) {
-
-
-// 	var modalID = $(this).data('modal-id');
-// 	let modal = OpenModal('#' + modalID);
-	
-
-// 	var modalTitle = $(this).data('modal-title');
-// 	if(typeof modalTitle !== 'undefined'){
-// 		modal.find(".modal-title").html(modalTitle);
-// 	}
-// 	let modalFieldPresets= $(this).data('field-presets');
-// 	if(modalFieldPresets){
-// 		for (let i = 0; i < modalFieldPresets.length; i++) {
-// 			modal.find(modalFieldPresets[i].childSelector).val(modalFieldPresets[i].value);
-// 		}
-// 	}
-// 	let modalContent = $(this).data('modal-content');
-// 	if(modalContent){
-// 		modal.find('.modal-content-wrapper').html(modalContent);
-// 	}
-	
+// Choose img in modal
+// $(".gallery__item img").click(function () {
+//   let src = $(this).attr("src");
+//   $(".gallery-slider__image img").attr("src", src);
+//   $(".gallery-slider__slide").fadeIn();
 // });
-// function OpenModal(selector){
-// 	$("body").css("overflow", "hidden");
-// 	var modal = $(selector + ".modal");
-// 	modal.addClass("modal-active");
-// 	return modal;
-// }
-// $(document).on('mousedown touchstart', '.modal-bg, .modal-cross', function(event) {
-// 	CloseModal(this);
+// $(".close").click(function () {
+//   $(".gallery-slider__slide").fadeOut();
 // });
-// function CloseModal(selector){
-// 	if($('.modal-active').length == 1){ // only 1 modal window is open
-// 		$("body").css("overflow", "visible");
-// 	}
-// 	var modal = $(selector).closest(".modal");
-// 	modal.removeClass("modal-active");
-// }
-// $(document).on('mousedown touchstart', '.modal-window', function(event) {
-// 	event.stopPropagation();
-// });
+

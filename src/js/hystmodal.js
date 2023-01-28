@@ -28,7 +28,7 @@ export default class HystModal{
         this.openedWindow = false;
         this.starter = false,
         this._nextWindows = false;
-        this._scrollPosition = 0;
+        this._scrollPosition = false;
         this._reopenTrigger = false;
         this._overlayChecker = false,
         this._isMoved = false;
@@ -54,10 +54,10 @@ export default class HystModal{
         }
         this.eventsFeeler();
     }
-
-
+    
     eventsFeeler(){
         document.addEventListener("click", function (e) {
+            document.body.style.overflow = "hidden";
             const clickedlink = e.target.closest("[" + this.config.linkAttributeName + "]");
             if (!this._isMoved && clickedlink) {
                 e.preventDefault();
@@ -161,7 +161,7 @@ export default class HystModal{
         this.openedWindow.setAttribute('aria-hidden', 'true');
 
         if (this.config.catchFocus) this.focusContol();
-        this._bodyScrollControl();
+        this._bodyScrollControl(0);
         this.isOpened = false;
         this.openedWindow.scrollTop = 0;
         this.config.afterClose(this);

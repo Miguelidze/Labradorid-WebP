@@ -18,4 +18,34 @@ $(document).ready(function () {
     slidesToScroll: 1,
     adaptiveHeight: true,
   });
+  $(".news-slider").slick({
+    centerMode: true,
+    centerPadding: 60,
+    dots: true,
+    arrows: true,
+    appendArrows: $(".news-arrows"),
+    appendDots: $(".news-dots"),
+    speed: 1000,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 790,
+        settings: {
+          centerPadding: 0,
+          centerMode: false,
+          slidesToShow: 1.5,
+          infinite: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 });

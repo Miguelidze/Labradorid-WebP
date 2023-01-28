@@ -22,7 +22,14 @@
 }
 .hystmodal__shadow--show{
     opacity: 0.6;
+    
 }
+// .hystmodal__shadow--show>.page-content-wrapper{
+//     &::-webkit-scrollbar{
+//         display: none;
+//     }
+// }
+
 .hystmodal {
     position: fixed;
     top: 0;
