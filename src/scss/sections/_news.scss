@@ -1,5 +1,8 @@
 .news-wrap {
   margin-bottom: 140px;
+  @media screen and (max-width: $tabletWidth) {
+    margin-bottom: 80px;
+  }
 }
 .news {
   margin: 0 30px;
@@ -102,6 +105,7 @@
   margin-bottom: 70px;
   @media screen and (max-width: $phoneWidth) {
     margin-bottom: 40px;
+    height: 40px;
   }
 }
 .news-arrows {
@@ -119,6 +123,10 @@
   height: 60px;
   background-size: contain;
   background-color: none;
+  @media screen and (max-width:$phoneWidth) {
+    width: 40px;
+    height: 40px;
+  }
 }
 .news-arrows .slick-arrow.slick-prev {
   background-image: url(img/svg/previous.svg);

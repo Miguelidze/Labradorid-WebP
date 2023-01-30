@@ -17,6 +17,8 @@
 @import "scss/sections/_puppies.scss";
 @import "scss/sections/_gallery.scss";
 @import "scss/sections/_news.scss";
+@import "scss/sections/_movie.scss";
+@import "scss/sections/_partners.scss";
 @import "scss/sections/_footer.scss";
 
 body {
@@ -56,6 +58,15 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+input {
+  font-family: $secondaryTextFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+  padding-left: 20px;
+  color: $fontColorPrimary;
 }
 .ibg {
   background-position: center;

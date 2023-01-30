@@ -57,7 +57,7 @@
   z-index: 0;
   overflow: hidden;
   // .main-slider__slide
-  @media screen and (min-width: $desktopWidth) {
+  @media screen and (min-width: $largeWidth) {
     aspect-ratio: 2.1;
   }
   @media screen and (max-width: $smTabletWidth) {

@@ -1,5 +1,8 @@
 .gallery-wrap {
-  margin-bottom: 150px;
+  margin-bottom: 140px;
+  @media screen and (max-width: $tabletWidth) {
+    margin-bottom: 80px;
+  }
 }
 .gallery-sector {
   position: relative;

@@ -32,15 +32,14 @@ $(document).ready(function () {
         breakpoint: 790,
         settings: {
           centerPadding: 0,
-          centerMode: false,
+          centerMode: true,
           slidesToShow: 1.5,
           infinite: false,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
-          arrows: false,
           centerMode: true,
           centerPadding: "40px",
           slidesToShow: 1,

@@ -3,7 +3,10 @@
 
   &__wrap {
     width: 100%;
-    margin-bottom: 135px;
+    margin-bottom: 140px;
+    @media screen and (max-width: $tabletWidth) {
+    margin-bottom: 80px;
+  }
   }
 
   // .puppies__content
